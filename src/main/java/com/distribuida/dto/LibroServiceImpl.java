@@ -40,14 +40,14 @@ public class LibroServiceImpl implements LibroService {
 
 	@Override
 	public void add(int idLibro, String titulo, String editorial, int numPaginas, String edicion, String idioma,
-			Date fechaPublicacion, String descripcion, String tipoPasta, String iSBN, int numEjemplares, String portada,
-			String presentacion, Double precio,int idAutor, int idCategoria) {
+			Date fechaPublicacion, String descripcion, String tipoPasta, String ISBN, int numEjemplares, String portada,
+			String presentacion, Double precio, int idAutor, Integer idCategoria) {
 		// TODO Auto-generated method stub
 		Autor autor = autorDAO.findOne(idAutor);
 		Categoria categoria = categoriaDAO.findOne(idCategoria);
 	    
 		Libro libro = new Libro(idLibro, titulo, editorial, numPaginas, edicion, idioma,
-			fechaPublicacion, descripcion, tipoPasta, iSBN, numEjemplares, portada,
+			fechaPublicacion, descripcion, tipoPasta, ISBN, numEjemplares, portada,
 			presentacion, precio);
 		
 		libro.setAutor(autor);
@@ -59,14 +59,14 @@ public class LibroServiceImpl implements LibroService {
 
 	@Override
 	public void up(int idLibro, String titulo, String editorial, int numPaginas, String edicion, String idioma,
-			Date fechaPublicacion, String descripcion, String tipoPasta, String iSBN, int numEjemplares, String portada,
-			String presentacion, Double precio,int idAutor, int idCategoria) {
+			Date fechaPublicacion, String descripcion, String tipoPasta, String ISBN, int numEjemplares, String portada,
+			String presentacion, Double precio, int idAutor, Integer idCategoria) {
 		// TODO Auto-generated method stub
 		Autor autor = autorDAO.findOne(idAutor);
 		Categoria categoria = categoriaDAO.findOne(idCategoria);
 	    
 		Libro libro = new Libro(idLibro, titulo, editorial, numPaginas, edicion, idioma,
-			fechaPublicacion, descripcion, tipoPasta, iSBN, numEjemplares, portada,
+			fechaPublicacion, descripcion, tipoPasta, ISBN, numEjemplares, portada,
 			presentacion, precio);
 		
 		libro.setAutor(autor);

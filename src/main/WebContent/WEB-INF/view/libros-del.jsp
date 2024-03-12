@@ -7,14 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Clientes</h1>
+	<h1>Borrar Cliente</h1>
 	
 	<form action="del" method="GET">
-	<input type="hidden" id="idCliente" name="idCliente" value="${cliente.idCliente}">
+	<input type="hidden" id="idLibro" name="idLibro" value="${libro.idLibro}">
 	<strong>¿Desea eliminar el dato?</strong>
 	<br/><br/>
-	<button type="submit">Guardar</button>
-	<button type="button" onclick="window.location.href='/ismac-libreria-web/clientes/findAll';return false;">Cancelar</button>
+	<button type="submit">Eliminar</button>
+	<button type="button" onclick="window.location.href='/ismac-libreria-web/libros/findAll';return false;">Cancelar</button>
 	</form>
+	 
 </body>
 </html>
